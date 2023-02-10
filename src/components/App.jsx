@@ -31,11 +31,11 @@ export class App extends Component {
     if (nameContacts.findIndex(contact => name === contact.name) !== -1) {
      alert(`${name} is already in contacts.`);
     } else {
-      // this.setState({contacts: [...this.state.contacts, nameContacts]})
-       this.setState({ contacts: nameContacts});
+      this.setState({contacts: [...this.state.contacts, {name,number,id}]})
+       
      
    }
-     nameContacts.push({ name, id, number });
+    
     console.log(nameContacts);
   }
 
