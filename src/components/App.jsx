@@ -28,10 +28,11 @@ export class App extends Component {
     const nameContacts = this.state.contacts
 
     
-    if (nameContacts.filter(contact => name === contact.name)  ) {
+    if (nameContacts.findIndex(contact => name === contact.name) !== -1) {
      alert(`${name} is already in contacts.`);
     } else {
-      this.setState({contacts: [...this.state.contacts, nameContacts]})
+      // this.setState({contacts: [...this.state.contacts, nameContacts]})
+       this.setState({ contacts: nameContacts});
      
    }
      nameContacts.push({ name, id, number });
